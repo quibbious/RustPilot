@@ -10,6 +10,7 @@ ALTITUDE = 0
 SPEED = 0
 PITCH = 0
 YAW = 0 # heading
+AP_RUNNING = False 
 def getValues():
     while True:
         global ALTITUDE, SPEED, PITCH, YAW
