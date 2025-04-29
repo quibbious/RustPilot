@@ -14,11 +14,12 @@ def getValues():
     while True:
         global ALTITUDE, SPEED, PITCH, YAW
         time.sleep(2)
-        # from main import ALTITUDE, SPEED, PITCH, YAW
+        # from main import ALTITUDE, SPEED, PITCH, YAW, AP_RUNNING
         ALTITUDE = random.randint(250,280)
         SPEED = random.randint(50,70)
         PITCH = random.randint(-5,5)
-        YAW = random.randint(350,360) 
+        YAW = random.randint(350,360)
+        AP_RUNNING = True
         print(ALTITUDE,SPEED,PITCH,YAW)
         
 
@@ -26,7 +27,7 @@ getValues_thread = Thread(target=getValues)
 
 # from main import RUNNING_AP, ALTITUDE, SPEED, PITCH, ROLL, YAW
 # start menu
-RUNNING_AP = False # temporary
+
 with wincam.DXCamera(0,0, 1280, 720, fps=165) as camera:
     
     getValues_thread.start()
