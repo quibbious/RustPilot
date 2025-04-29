@@ -4,6 +4,8 @@ import os
 from Instruments import getXYZ, getClimbRate, getRotation, plotLocation
 import keyboard as kb
 import sys 
+global RUNNING_AP, ALTITUDE, SPEED, PITCH, YAW
+
 
 if os.path.exists("pos_history.log"): 
     os.remove("pos_history.log") 
@@ -76,7 +78,7 @@ class MiniControls():
             print("emergency stop complete")
 
 time.sleep(3)
-
+RUNNING_AP = True
 MiniControls.startup()
 MiniControls.up(10)
 time.sleep(5)
