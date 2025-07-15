@@ -10,8 +10,8 @@ z_coords = []
 for position in dictPoses.values():
     x, y, z = position  # unpack the coordinates
     x_coords.append(x)
-    y_coords.append(z)
-    z_coords.append(y)
+    y_coords.append(y)
+    z_coords.append(z)
 
 # Set up the figure and axis
 fig = plt.figure()
